@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogPage = () => {
   return (
-    <div className="flex flex-row m-7">
+    <div className="flex flex-row m-7 flex-wrap">
       <div className="flex flex-col w-[75%] mr-6">
         <h1 className=" text-black text-2xl underline md:underline-offset-[10px] underline-offset-[7px] mt-6">
           Latest Blogs
@@ -44,7 +44,7 @@ const BlogPage = () => {
           </div>
         </a>
       </div>
-      <div className="flex flex-col w-[25%]">
+      <div className="flex flex-col sm:w-[25%] w[100%]">
         <h1 className="text-black text-xl m-4 "> Trending</h1>
         <div className="flex flex-row justify-between bg-gray-300 h-7 mt-6 border-gray-200 rounded-lg">
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">lorem</p>
