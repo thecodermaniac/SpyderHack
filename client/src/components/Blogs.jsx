@@ -13,6 +13,8 @@ const Blogs = () => {
         <Card />
         <Card />
         <Card />
+
+
       </div>
     </div>
   );
