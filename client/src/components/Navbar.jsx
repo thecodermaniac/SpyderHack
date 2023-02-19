@@ -15,12 +15,13 @@ export default function Navbar(props) {
   useEffect(() => {
     window.addEventListener("scroll", setFixed);
   });
+  console.log(fix);
   return (
     // For Sticky, set the classes: sticky, top-0 left-0
     <nav className=" transition-all duration-1000 sticky top-0 left-0 z-20 backdrop-blur-lg">
       {/* Top Nav */}
       <div
-        className={`  bg-transparent flex justify-around sticky w-full py-5 md:py-3  `}
+        className={`  bg-transparent flex justify-around sticky w-full py-5   `}
       >
         {/* Logo */}
         <div>
@@ -62,10 +63,10 @@ export default function Navbar(props) {
       </div>
       {/* Top Nav Ends */}
       {/* Bottom Nav */}
-      <div>
+      <div className={`${fix ? "hidden" : ""}`}>
         <ul
-          className={` flex gap-12 items-center justify-center bg-[#EFF6FF] text-black py-2${
-            fix ? "bg-transparent" : ""
+          className={` flex gap-12 py-2 items-center justify-center bg-[#EFF6FF] text-black py-2${
+            fix ? "hidden" : ""
           }`}
         >
           <li>Blogs</li>
