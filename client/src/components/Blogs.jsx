@@ -1,26 +1,20 @@
 import React from "react";
-import BlogCards from "./BlogCards";
-import TrendingCards from "./TrendingCards";
+import "../components/Card";
+import Card from "../components/Card";
 
 const Blogs = () => {
   return (
-    <div>
-      <div className="grid grid-cols-2 gap-4 ">
-        <div className="flex flex-col w-screen">
-          <div className="flex flex-row">
-            <div className="display inline-block">Latest</div>
-            <div className="display inline-block">Top</div>
-          </div>
-          <BlogCards />
-          <BlogCards />
-          <BlogCards />
-        </div>
-        <div className="flex flex-col w-1/3">
-          <div className="flex flex-row">
-            <div className="display inline-block">Latest</div>
-          </div>
-          <TrendingCards />
-        </div>
+    <div className=" ml-5 md:ml-20">
+      <h1 className=" text-black text-3xl font-semibold underline md:underline-offset-[10px] underline-offset-[7px]">
+        Latest Blogs
+      </h1>
+      {/* Cards */}
+      <div className=" flex flex-col gap-10 m-10 py-10 md:flex-row lg:flex-row lg:flex-wrap">
+        <Card />
+        <Card />
+        <Card />
+
+
       </div>
     </div>
   );
