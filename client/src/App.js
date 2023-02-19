@@ -8,13 +8,14 @@ import {
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import BlogPage from "./components/BlogPage";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
-        <Route path="" element={<Home />} />
+        <Route path="/blog" element={<BlogPage />} />
       </Route>
     )
   );
