@@ -3,6 +3,7 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import codeLogo from "../images/codeLogo.png";
 import { BsSearch } from "react-icons/bs";
 import { HiOutlineTranslate } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const [fix, setFix] = useState(false);
@@ -93,13 +94,14 @@ export default function Navbar(props) {
       >
         <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
-            <a
-              href="#"
-              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-              aria-current="page"
-            >
-              Blogs
-            </a>
+            <Link to={"/blog"}>
+              <a
+                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                aria-current="page"
+              >
+                Blogs
+              </a>
+            </Link>
           </li>
           <li>
             <a
@@ -152,14 +154,14 @@ export default function Navbar(props) {
       {/* Top Nav Ends */}
       {/* Bottom Nav */}
       <div>
-
         <ul
-          className={` flex gap-12 items-center justify-center bg-[#EFF6FF] text-black py-2${
+          className={`hidden sm:flex gap-12 items-center justify-center bg-[#EFF6FF] text-black py-2${
             fix ? "bg-transparent" : ""
           }`}
         >
-
-          <li>Blogs</li>
+          <Link to={"/blog"}>
+            <li>Blogs</li>
+          </Link>
           <li>Interview Prep</li>
           <li>Interview Experience</li>
           <li>Write for Us</li>
